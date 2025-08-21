@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
           playsInline
           poster="/images/portimage.jpg"
         >
-          <source src="/videos/ShippingVideo.mp4" type="video/mp4" />
+          <source src="/videos/shippingvideo.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="hero-video-overlay"></div>
