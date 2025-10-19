@@ -79,7 +79,7 @@ code {
 .btn-secondary {
   background: transparent;
   color: var(--white);
-  border: 2px solid var(--secondary-cyan);
+  border: 1px solid var(--secondary-cyan);
 }
 
 .btn-secondary:hover {
@@ -112,7 +112,7 @@ code {
 
 .card {
   background: var(--white);
-  border-radius: 16px;
+  border-radius: 8px;
   padding: 32px;
   box-shadow: 0 4px 20px var(--shadow-card);
   transition: all 0.3s ease;

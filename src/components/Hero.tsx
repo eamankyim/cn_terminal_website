@@ -29,12 +29,12 @@ const Hero: React.FC = () => {
               <h2 className="hero-logo-text">CN Terminal Co. Ltd</h2>
             </div>
             <h1 className="hero-title">
-              Global Shipping
-              <span className="highlight"> Solutions</span>
+              Licensed Customs House
+              <span className="highlight"> Agency</span>
             </h1>
             <p className="hero-subtitle">
-              Connecting continents, delivering excellence. Your trusted partner for 
-              international logistics, freight forwarding, and supply chain management.
+              Your trusted partner in shipping and logistics. We provide comprehensive customs clearance, 
+              freight forwarding, and cargo logistics services with a commitment to speed, reliability, and excellence.
             </p>
             <div className="hero-actions">
               <a href="#contact" className="btn btn-primary">Get Started</a>

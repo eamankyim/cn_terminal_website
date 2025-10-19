@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, Globe } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 import './Footer.css';
 
 const Footer: React.FC = () => {
@@ -16,24 +16,19 @@ const Footer: React.FC = () => {
               </div>
             </div>
             <p className="footer-description">
-              Connecting continents, delivering excellence. Your trusted partner for 
-              international logistics and supply chain solutions.
+              Licensed Customs House Agency providing comprehensive shipping and logistics 
+              solutions with a commitment to speed, reliability, and excellence.
             </p>
-            <div className="social-links">
-              <a href="#" className="social-link">LinkedIn</a>
-              <a href="#" className="social-link">Twitter</a>
-              <a href="#" className="social-link">Facebook</a>
-            </div>
           </div>
           
           <div className="footer-section">
             <h4>Services</h4>
             <ul className="footer-links">
-              <li><a href="#services">Ocean Freight</a></li>
+              <li><a href="#services">Freight Forwarding</a></li>
               <li><a href="#services">Air Cargo</a></li>
-              <li><a href="#services">Land Transport</a></li>
+              <li><a href="#services">Custom Clearance</a></li>
               <li><a href="#services">Warehousing</a></li>
-              <li><a href="#services">Customs Brokerage</a></li>
+              <li><a href="#services">Haulage</a></li>
             </ul>
           </div>
           
@@ -63,16 +58,8 @@ const Footer: React.FC = () => {
             <h4>Contact Info</h4>
             <div className="contact-info">
               <p><Mail size={16} /> info@cnterminal.com</p>
-              <p><Phone size={16} /> +1 (555) 123-4567</p>
-              <p><Globe size={16} /> 24/7 Global Support</p>
-            </div>
-            <div className="newsletter">
-              <h5>Stay Updated</h5>
-              <p>Get the latest logistics insights</p>
-              <div className="newsletter-form">
-                <input type="email" placeholder="Enter your email" />
-                <button className="btn btn-primary">Subscribe</button>
-              </div>
+              <p><Phone size={16} /> +233 553 799 811</p>
+              <p><Phone size={16} /> +233 506 580 292</p>
             </div>
           </div>
         </div>
@@ -85,6 +72,9 @@ const Footer: React.FC = () => {
               <a href="#">Terms of Service</a>
               <a href="#">Cookie Policy</a>
             </div>
+          </div>
+          <div className="developer-credit">
+            <p>Developed by <a href="https://ororosolutions.com/" target="_blank" rel="noopener noreferrer">Ororo Solutions</a></p>
           </div>
         </div>
       </div>

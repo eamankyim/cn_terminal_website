@@ -1,28 +1,38 @@
 import React from 'react';
-import { Target, Zap, Handshake, Leaf, Globe, Smartphone, Shield, Ship } from 'lucide-react';
+import { Zap, Globe, Shield, Award, TrendingUp, Users, BadgeCheck, Leaf } from 'lucide-react';
 import './About.css';
 
 const About: React.FC = () => {
   const values = [
     {
-      icon: <Target size={48} />,
-      title: 'Reliability',
-      description: 'Consistent delivery performance and transparent communication'
+      icon: <Award size={48} />,
+      title: 'Honour and Integrity',
+      description: 'We uphold the highest ethical standards in all our dealings'
+    },
+    {
+      icon: <TrendingUp size={48} />,
+      title: 'Forward Thinking',
+      description: 'Innovation and adaptability drive our continuous growth'
     },
     {
       icon: <Zap size={48} />,
-      title: 'Efficiency',
-      description: 'Optimized routes and processes to reduce costs and time'
+      title: 'Quality and Efficiency',
+      description: 'Excellence in service delivery with optimized processes'
     },
     {
-      icon: <Handshake size={48} />,
-      title: 'Partnership',
-      description: 'Long-term relationships built on trust and mutual success'
+      icon: <Users size={48} />,
+      title: 'Customer-Focused',
+      description: 'Your needs and satisfaction are at the heart of everything we do'
+    },
+    {
+      icon: <BadgeCheck size={48} />,
+      title: 'Professionalism',
+      description: 'Maintaining the highest standards of service and conduct'
     },
     {
       icon: <Leaf size={48} />,
-      title: 'Sustainability',
-      description: 'Eco-friendly practices and carbon footprint reduction'
+      title: 'Employee Development',
+      description: 'Investing in our people to build a stronger future'
     }
   ];
 
@@ -31,29 +41,46 @@ const About: React.FC = () => {
       <div className="container">
         <div className="about-content">
           <div className="about-text">
-            <h2 className="section-title">About CN Terminal Co. Ltd</h2>
+            <h2 className="section-title">About CN Terminal Company Limited</h2>
             <p className="about-description">
-              With over 25 years of experience in international logistics, CN Terminal Co. Ltd has established 
-              itself as a trusted partner for businesses worldwide. We specialize in providing 
-              end-to-end supply chain solutions that drive growth and efficiency.
+              CN Terminal Company Limited is a licensed Customs House Agency that plays a significant role in multiple sectors of the shipping industry. The company has demonstrated consistent growth in its operations, revenue, and workforce. Additionally, it has developed global partnerships and broadened its international clientele, enhancing its presence in the global market.
             </p>
             
             <div className="about-stats">
               <div className="stat">
-                <div className="stat-number">25+</div>
-                <div className="stat-label">Years Experience</div>
+                <div className="stat-number">Licensed</div>
+                <div className="stat-label">Customs House Agency</div>
               </div>
               <div className="stat">
-                <div className="stat-number">150+</div>
-                <div className="stat-label">Countries Served</div>
+                <div className="stat-number">Global</div>
+                <div className="stat-label">Partnerships</div>
               </div>
               <div className="stat">
-                <div className="stat-number">10,000+</div>
-                <div className="stat-label">Happy Clients</div>
+                <div className="stat-number">Growing</div>
+                <div className="stat-label">International Clientele</div>
               </div>
             </div>
 
             <div className="about-features">
+              <h3 style={{ marginBottom: '1.5rem', color: '#1a365d' }}>Why Choose Us</h3>
+              <div className="feature-item">
+                <div className="feature-icon">
+                  <Zap size={24} />
+                </div>
+                <div className="feature-content">
+                  <h4>Speed & Convenience</h4>
+                  <p>We align latest developments with our values to provide best tailored services</p>
+                </div>
+              </div>
+              <div className="feature-item">
+                <div className="feature-icon">
+                  <Shield size={24} />
+                </div>
+                <div className="feature-content">
+                  <h4>Trustworthy & Proactive</h4>
+                  <p>Transparent and consistent with our deliverables</p>
+                </div>
+              </div>
               <div className="feature-item">
                 <div className="feature-icon">
                   <Globe size={24} />
@@ -62,35 +89,6 @@ const About: React.FC = () => {
                   <h4>Global Network</h4>
                   <p>Strategic partnerships with leading carriers and agents worldwide</p>
                 </div>
-              </div>
-              <div className="feature-item">
-                <div className="feature-icon">
-                  <Smartphone size={24} />
-                </div>
-                <div className="feature-content">
-                  <h4>Real-time Tracking</h4>
-                  <p>Advanced technology for complete shipment visibility</p>
-                </div>
-              </div>
-              <div className="feature-item">
-                <div className="feature-icon">
-                  <Shield size={24} />
-                </div>
-                <div className="feature-content">
-                  <h4>Risk Management</h4>
-                  <p>Comprehensive insurance and compliance solutions</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div className="about-visual">
-            <div className="about-image">
-              <div className="image-placeholder">
-                <div className="placeholder-icon">
-                  <Ship size={64} />
-                </div>
-                <div className="placeholder-text">Global Logistics Excellence</div>
               </div>
             </div>
           </div>

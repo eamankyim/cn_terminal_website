@@ -1,154 +1,54 @@
-import React, { useState } from 'react';
-import { Mail, Phone, MessageCircle, MapPin } from 'lucide-react';
+import React from 'react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 import './Contact.css';
 
 const Contact: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    service: '',
-    message: ''
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will get back to you soon.');
-    setFormData({
-      name: '',
-      email: '',
-      company: '',
-      service: '',
-      message: ''
-    });
-  };
-
   return (
     <section id="contact" className="section contact">
       <div className="container">
         <h2 className="section-title">Get In Touch</h2>
         <p className="section-subtitle">
-          Ready to optimize your logistics? Let's discuss your shipping needs
+          We're here to help with all your shipping and logistics needs
         </p>
         
-        <div className="contact-content">
-          <div className="contact-info">
-            <h3>Let's Start a Conversation</h3>
-            <p>
-              Whether you're looking for a quote, have questions about our services, 
-              or want to discuss a partnership, we're here to help.
-            </p>
+        <div className="contact-wrapper">
+          <div className="contact-cards">
+            <div className="contact-card">
+              <div className="contact-icon">
+                <Mail size={40} />
+              </div>
+              <h3>Email Us</h3>
+              <a href="mailto:info@cnterminal.com">info@cnterminal.com</a>
+              <a href="mailto:enquiries@cnterminal.com">enquiries@cnterminal.com</a>
+              <p className="contact-note">For enquiries and information</p>
+            </div>
             
-            <div className="contact-methods">
-              <div className="contact-method">
-                <div className="method-icon">
-                  <Mail size={24} />
-                </div>
-                <div className="method-content">
-                  <h4>Email Us</h4>
-                  <p>info@globalship.com</p>
-                  <span>Response within 2 hours</span>
-                </div>
+            <div className="contact-card">
+              <div className="contact-icon">
+                <Phone size={40} />
               </div>
-              
-              <div className="contact-method">
-                <div className="method-icon">
-                  <Phone size={24} />
-                </div>
-                <div className="method-content">
-                  <h4>Call Us</h4>
-                  <p>+1 (555) 123-4567</p>
-                  <span>24/7 support available</span>
-                </div>
-              </div>
-              
-             
+              <h3>Call Us</h3>
+              <a href="tel:+233553799811">+233 553 799 811</a>
+              <a href="tel:+233506580292">+233 506 580 292</a>
+              <a href="tel:+233555552645">+233 555 552 645</a>
+              <p className="contact-note">Available during business hours</p>
             </div>
-
-            <div className="office-locations">
-              <h4>Our Offices</h4>
-              <div className="office-locations-grid">
-                <div className="location">
-                  <strong>Tema</strong>
-                  <p>Sika avenue, Community 2<br />Tema, Ghana</p>
-                </div>
-                <div className="location">
-                  <strong>London</strong>
-                  <p>456 Commerce St, Floor 3<br />London, UK EC1A 1BB</p>
-                </div>
-                
+            
+            <div className="contact-card">
+              <div className="contact-icon">
+                <MapPin size={40} />
               </div>
+              <h3>Visit Us</h3>
+              <p className="address">
+                <strong>CN Terminal Company Limited</strong><br />
+                Salifu Dagati Extension<br />
+                Tema Community Two<br />
+                Opposite Tema Police Station<br />
+                P.O. BOX TN 161<br />
+                Teshie-Nungua, Accra<br />
+                Ghana
+              </p>
             </div>
-          </div>
-          
-          <div className="contact-form-container">
-            <form className="contact-form" onSubmit={handleSubmit}>
-              <div className="form-group">
-                <label htmlFor="name">Full Name *</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  placeholder="Enter your full name"
-                />
-              </div>
-              
-              <div className="form-group">
-                <label htmlFor="email">Email Address *</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  placeholder="Enter your email address"
-                />
-              </div>
-              
-              <div className="form-group">
-                <label htmlFor="company">Company</label>
-                <input
-                  type="text"
-                  id="company"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleChange}
-                  placeholder="Enter your company name"
-                />
-              </div>
-              
-             
-              
-              <div className="form-group">
-                <label htmlFor="message">Message *</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={5}
-                  placeholder="Tell us about your shipping needs..."
-                />
-              </div>
-              
-              <button type="submit" className="btn btn-primary">
-                Send Message
-              </button>
-            </form>
           </div>
         </div>
       </div>

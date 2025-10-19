@@ -1,57 +1,8 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { Globe, Handshake, Star } from 'lucide-react';
+import React from 'react';
+import { TrendingUp, Users, Leaf, Award } from 'lucide-react';
 import './Stats.css';
 
 const Stats: React.FC = () => {
-  const [counts, setCounts] = useState({
-    countries: 0,
-    clients: 0,
-    years: 0
-  });
-
-  const targetCounts = {
-    countries: 150,
-    clients: 10000,
-    years: 25
-  };
-
-  const animateCounters = useCallback(() => {
-    const duration = 2000;
-    const steps = 60;
-    let currentStep = 0;
-
-    const timer = setInterval(() => {
-      currentStep++;
-      
-      setCounts({
-        countries: Math.min(Math.floor((targetCounts.countries / steps) * currentStep), targetCounts.countries),
-        clients: Math.min(Math.floor((targetCounts.clients / steps) * currentStep), targetCounts.clients),
-        years: Math.min(Math.floor((targetCounts.years / steps) * currentStep), targetCounts.years)
-      });
-
-      if (currentStep >= steps) {
-        clearInterval(timer);
-      }
-    }, duration / steps);
-  }, []);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          animateCounters();
-        }
-      });
-    });
-
-    const statsSection = document.querySelector('.stats');
-    if (statsSection) {
-      observer.observe(statsSection);
-    }
-
-    return () => observer.disconnect();
-  }, [animateCounters]);
-
   return (
     <section 
       className="section stats" 
@@ -66,56 +17,56 @@ const Stats: React.FC = () => {
         <div className="stats-content">
           <h2 className="section-title">Our Impact</h2>
           <p className="section-subtitle">
-            With over 25 years of experience in international logistics, CN Terminal Co. Ltd has established itself as a trusted partner for businesses worldwide. We specialize in providing end-to-end supply chain solutions that drive growth and efficiency.
+            At CN Terminal, our impact goes beyond services; it reflects our commitment to progress, reliability, and community growth.
           </p>
           
           <div className="stats-grid">
             <div className="stat-item">
-              <div className="stat-number">{counts.years}+</div>
-              <div className="stat-label">Years Experience</div>
               <div className="stat-icon">
-                <Star size={40} />
+                <TrendingUp size={48} />
               </div>
+              <h3 className="stat-title">Driving Economic Growth</h3>
+              <p className="stat-description">
+                We enable our clients business scale up and strengthen their supply chains.
+              </p>
             </div>
             
             <div className="stat-item">
-              <div className="stat-number">{counts.countries}+</div>
-              <div className="stat-label">Countries Served</div>
               <div className="stat-icon">
-                <Globe size={40} />
+                <Users size={48} />
               </div>
+              <h3 className="stat-title">Empowering Communities</h3>
+              <p className="stat-description">
+                We create jobs and foster inclusive growth in our operational areas.
+              </p>
             </div>
             
             <div className="stat-item">
-              <div className="stat-number">{counts.clients.toLocaleString()}+</div>
-              <div className="stat-label">Happy Clients</div>
               <div className="stat-icon">
-                <Handshake size={40} />
+                <Leaf size={48} />
               </div>
+              <h3 className="stat-title">Sustaining the Environment</h3>
+              <p className="stat-description">
+                Our operations prioritise sustainability and responsible resource use.
+              </p>
+            </div>
+
+            <div className="stat-item">
+              <div className="stat-icon">
+                <Award size={48} />
+              </div>
+              <h3 className="stat-title">Setting New Standards</h3>
+              <p className="stat-description">
+                We lead in terminal management with a focus on innovation, safety, and integrity.
+              </p>
             </div>
           </div>
 
           <div className="stats-highlight">
             <div className="highlight-content">
-              <h3>Trusted by Industry Leaders</h3>
-              <p>
-                From Fortune 500 companies to growing startups, we've built lasting partnerships 
-                based on reliability, transparency, and exceptional service.
+              <p className="impact-closing">
+                Every milestone achieved connects businesses, supports development, and builds a more efficient future for all.
               </p>
-              <div className="highlight-stats">
-                <div className="highlight-stat">
-                  <strong>99.8%</strong>
-                  <span>On-time Delivery</span>
-                </div>
-                <div className="highlight-stat">
-                  <strong>24/7</strong>
-                  <span>Customer Support</span>
-                </div>
-                <div className="highlight-stat">
-                  <strong>ISO 9001</strong>
-                  <span>Certified</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
